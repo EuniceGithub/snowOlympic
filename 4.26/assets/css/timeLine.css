@@ -1,0 +1,380 @@
+body{
+	font-family:sans-serif;
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+	display: none;
+}
+
+.big_snowSport_container{
+	/* background-color:#f6f6f6; */
+    border-radius: 40px;
+	border:1px solid #cee6ff;
+    width: 100%;
+    margin: 23px auto;
+    overflow: hidden;
+    background-image: url(../images/雪花底纹2.png);
+	/* background-image: url(../images/msg_bg2.png); */
+    background-size: contain;
+}
+
+.timeLineContainer{
+	/* background-image: linear-gradient(-180deg,#d7e1ff, #fdffee,#eeffff,#fff,#fdffee,#d8efff,#d7e1ff); */
+	border-radius:20px;
+	margin-right:10vw;
+}
+.upLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.downLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto 50px auto;
+}
+.boxInLine1,.boxInLine2,.boxInLine3,.boxInLine4,.boxInLine5,.boxInLine6,.boxInLine{
+    width: 14.5vw;
+    height: 7vw;
+    margin-bottom: 1vw;
+}
+
+.boxInLine1,.boxInLine3,.boxInLine5{
+    width: 14.5vw;
+    height: auto;
+}
+
+
+.boxInLine1:hover .textInLine1,.boxInLine2:hover .textInLine2,.boxInLine3:hover .textInLine3,
+.boxInLine4:hover .textInLine4,.boxInLine5:hover .textInLine5,.boxInLine6:hover .textInLine6{
+    display: block;
+}
+
+.textInLine1,.textInLine3,.textInLine5{
+    padding: 8px 12px;
+    color: #f9ffff;
+    border-radius: 15px;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+    width: 14vw;
+	font-size:0.95rem;
+	font-weight:520;
+    display: none;
+}
+
+.textInLine2,.textInLine4,.textInLine6{
+	background-color:#f9ffff;
+	padding: 10px;
+	color: #f9ffff;
+	border-radius: 15px;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+	width: 14vw;
+	margin: 5px 0 10px 0;
+	font-size:0.95rem;
+	font-weight:520;
+	display: none;
+}
+.textInLine6{
+	margin-left:-60px;
+}
+.textInLine2{
+	margin-left:40px;
+}
+.textInLine4{
+	margin-left:-20px;
+}
+.textInLine1{
+	margin-left:40px;
+}
+.textInLine3, .textInLine4{
+    background-color:#9badfdd2;
+}
+
+.textInLine2{
+    background-image: linear-gradient(to right,#91a5ffd3, #a1c4fdb2);
+}
+
+.textInLine5{
+    background-image: linear-gradient(to left,#91a5ffd3, #A1C4FDb2);
+}
+
+.textInLine1,.textInLine6{
+    background-color: #91a5ffd3;
+}
+
+.holdTimes1,.holdTimes3,.holdTimes5,.holdTimes2,.holdTimes4,.holdTimes6{
+    width: 14vw;
+    text-align: center;
+    color:#606060 ;
+    font-size: 1rem;
+	font-weight:900;
+	margin-left:1vw;
+}
+.holdTimes1,.holdTimes3,.holdTimes5{
+    position: absolute;
+    top: 8vw;
+}
+	
+.holdTimes6{
+	margin-left:-15px;
+}
+.holdTimes5{
+	margin-left:10px;
+}
+.holdTimes4{
+	margin-left:15px;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lineDots{
+    background-color: #A1C4FD;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.lineDots1{
+    background-color: #91a5ff;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.lineCuts{
+    background-color: #A1C4FD;
+    height: 6px;
+    width: 14vw;
+}
+.lineCuts1, .lineCuts4{
+    background-color:#91a5ff;
+    height: 6px;
+    width: 14vw;
+}
+.lineCuts2{
+    background-image: linear-gradient(to right,#91a5ff, #A1C4FD);
+    height: 6px;
+    width: 14vw;
+}
+.lineCuts3{
+    background-image: linear-gradient(to left,#91a5ff, #A1C4FD);
+    height: 6px;
+    width: 14vw;
+}
+/* ----------------------------------- */
+#loop{
+	float:left;
+    height:35vw;
+    width:58vw;
+	margin-left:2vw;
+	margin-top:-2vw;
+}
+
+/* 返回主页和查看更多的按钮 */
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ margin-top:20px;
+ margin-left:40px;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.return {
+ width: 12rem;
+ height: auto;
+}
+
+button.return .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #282936;
+ border-radius: 1.625rem;
+}
+
+button.return .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.return .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.return .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.return .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+
+.bottomContainer{
+    display: flex;
+	margin-top:20px;
+}
+.bottomButtonContainer{
+    width: 30%;
+    width: 600px;
+    padding-bottom: 40px;
+	margin-left:-90px;
+	margin-top:-20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+/* 1994-2022按钮 */
+.bottomButtonContainer button {
+    position: relative;
+    padding: 9px 20px;
+    display: block;
+    overflow: hidden;
+    border-radius: 30px;
+	margin-left:20px;
+    font-size:20px;
+    font-weight:700;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.42);
+}
+.bottomButtonContainer button span {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
+.bottomButtonContainer button .liquid {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(#afd0f8, #edf9ff);
+    transition: .5s;
+}
+.bottomButtonContainer button .liquid::after,.bottomButtonContainer button .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    background: #fff;
+}
+.bottomButtonContainer button .liquid::before {
+    border-radius: 35%;
+    background:  rgba(199, 149, 219, 0.4);
+    animation: animate 10s linear infinite;
+}
+.bottomButtonContainer button .liquid::after {
+    border-radius: 45%;
+    background: rgba(70, 150, 255, 0.4);
+    animation: animate 5s linear infinite;
+}
+.bottomButtonContainer button:hover .liquid {
+    top: -150px;
+    background:#ffffff;
+    /* border:20px solid #717171; */
+}
+.bottomButtonContainer button:hover span {
+    color:#0b0b0b;
+}
+@keyframes animate {
+    0% {transform: translate(-50%, -75%) rotate(0deg);}
+    100% {transform: translate(-50%, -75%) rotate(360deg);}
+}
+.bottomButtonContainer .row{
+    width: 440px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8{
+    width: 100vw;
+    height: 60vw;
+    background-color: #282936;
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0vw;
+}
+#medals_1994_con, #medals_1998_con, #medals_2002_con,#medals_2006_con, #medals_2010_con, #medals_2014_con,#medals_2018_con, #medals_2022_con{
+    display: none;
+    position: absolute;
+    top: 20vh;
+    left: 28vw;
+    width: 45vw;
+    height: 35vw;
+    background-color:#edf9ff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.42);
+    background-image: radial-gradient(circle,#c4dfff 15%,#edf9ff 35%,#edf9ff 50%);
+    border-radius: 20px;
+    overflow: visible;
+	z-index:2000;
+}
+.buttonX{
+    position: relative;
+    top: -38vw;
+    left: 39vw;
+    border:3px solid rgba(0,0,0,0.42);
+    color: rgba(0,0,0,0.42);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
