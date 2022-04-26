@@ -214,7 +214,7 @@ p{
 }
 
 .introduce{
-    display: flex;
+    display: flex;  
     flex-direction: column;
 }
 
@@ -239,7 +239,7 @@ p{
     flex-direction: column;
     margin-top: -5vw;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .text_box4{
@@ -247,7 +247,7 @@ p{
     flex-direction: column;
     margin-top: -4vw;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .name, .name2{
