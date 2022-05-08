@@ -26,7 +26,7 @@ var myChart = echarts.init(document.getElementById('economicValueOfAthletes'));
                 },
 			},
             {
-                name: '谷爱玲',
+                name: '谷爱凌',
                 itemStyle: {
                     color: '#66ccff',
                 },
